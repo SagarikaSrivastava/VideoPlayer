@@ -1,7 +1,6 @@
 package org.example.videoplayer;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.media.Media;
@@ -11,7 +10,6 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 
 public class HelloApplication extends Application {
 
@@ -32,11 +30,7 @@ public class HelloApplication extends Application {
         player.setAutoPlay(true);
         MediaView mediaView = new MediaView(player);
         ((Group) scene.getRoot()).getChildren().add(mediaView);
-//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-//        stage.setTitle("Hello!");
-//        stage.setScene(scene);
-//        stage.show();
+
     }
 
     public static void main(String[] args) {
