@@ -1,0 +1,36 @@
+package org.example.videoplayer;
+
+import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.util.Duration;
+
+import java.security.PrivilegedAction;
+
+public class VideoPlayerController extends BorderPane {
+    private MediaPlayer player;
+    private MediaView mediaView;
+    private final boolean repeat = false;
+    private boolean pauseRequested = false;
+    private boolean atEndOfVideo = false;
+    private Duration duration;
+    private Slider timeSlider;
+    private Label playTime;
+    private Slider volumeSlider;
+    private HBox mediaBox;
+
+    public VideoPlayerController(final MediaPlayer mp) {
+        player = mp;
+        setStyle("-fx-background-color: #bfc2c7;");
+        mediaView = new MediaView(player);
+        Pane vwPane = new Pane() {
+        };
+        vwPane.getChildren().add(mediaView);
+        vwPane.setStyle("-fx-background-color: black;");
+        setCenter(vwPane);
+    }
+}

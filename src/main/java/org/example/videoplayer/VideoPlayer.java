@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class VideoPlayer extends Application {
 
     private final File videoFile = new File("C:\\Users\\Sagarika\\Videos\\sample1.mp4");
 
